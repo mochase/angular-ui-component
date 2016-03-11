@@ -1,0 +1,22 @@
+<ul class="pagination pull-right" ng-if="isShow">   
+    <li class="paginate_button previous">
+        <a ng-click="previous()" href="#" class="btn btn-default" ng-class="{disabled: current == 1}">
+            <span class="glyphicon glyphicon-menu-left"></span>
+        </a>                                                                           
+    </li>
+    <li class="paginate_button">
+        <a ng-click="firstPage()" href="#" class="btn btn-default" ng-class="{disabled: current == 1}">首页
+        </a>                                                                           
+    </li>
+    <li ng-repeat = "i in array">
+        <a href="#" ng-click="getPage(i)" class="btn btn-default" ng-class="{disabled: current == i}">{{i}}</a>
+    </li>
+    <li class ="paginate_button">
+        <a ng-click="lastPage()" href="#" class="btn btn-default" ng-class="{disabled: current == total}">末页</a>
+    </li>
+    <li class="paginate_button">
+        <a href="#" ng-click="next()" class="btn btn-default" ng-class="{disabled: current == total}">
+            <span class="glyphicon glyphicon-menu-right"></span>
+        </a>
+    </li>
+</ul>
